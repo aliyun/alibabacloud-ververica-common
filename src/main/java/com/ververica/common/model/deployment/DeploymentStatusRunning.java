@@ -1,9 +1,8 @@
 package com.ververica.common.model.deployment;
 
-import lombok.Data;
-
 import java.util.Date;
 import java.util.List;
+import lombok.Data;
 
 @Data
 public class DeploymentStatusRunning {

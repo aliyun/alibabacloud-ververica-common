@@ -8,22 +8,17 @@ import lombok.Data;
 @JsonTypeIdResolver(DeploymentUpgradeStrategy.TypeResolver.class)
 public interface DeploymentUpgradeStrategy extends Polymorphic {
 
-  /**
-   * The deployment WILL take a savepoint before upgrading. It will resume from this savepoint.
-   */
+  /** The deployment WILL take a savepoint before upgrading. It will resume from this savepoint. */
   @Data
   class StatefulDeploymentUpgrade implements DeploymentUpgradeStrategy {
     public static final String KIND = "STATEFUL";
     String kind = KIND;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
-  /**
-   * The deployment WILL NOT take any savepoint before upgrading.
-   */
+  /** The deployment WILL NOT take any savepoint before upgrading. */
   @Data
   class StatelessDeploymentUpgrade implements DeploymentUpgradeStrategy {
     public static final String KIND = "STATELESS";
@@ -31,13 +26,10 @@ public interface DeploymentUpgradeStrategy extends Polymorphic {
     String kind = KIND;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
-  /**
-   * The deployment WILL NOT upgrade.
-   */
+  /** The deployment WILL NOT upgrade. */
   @Data
   class NoDeploymentUpgrade implements DeploymentUpgradeStrategy {
     public static final String KIND = "NONE";
@@ -45,8 +37,7 @@ public interface DeploymentUpgradeStrategy extends Polymorphic {
     String kind = KIND;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -54,8 +45,7 @@ public interface DeploymentUpgradeStrategy extends Polymorphic {
     String kind;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   final class TypeResolver extends PolymorphicResolver {

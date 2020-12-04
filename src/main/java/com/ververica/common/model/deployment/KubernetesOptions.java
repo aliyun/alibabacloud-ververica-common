@@ -1,10 +1,9 @@
 package com.ververica.common.model.deployment;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import lombok.Data;
-
 import java.util.List;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class KubernetesOptions {
@@ -42,4 +41,3 @@ public class KubernetesOptions {
     }
   }
 }
-

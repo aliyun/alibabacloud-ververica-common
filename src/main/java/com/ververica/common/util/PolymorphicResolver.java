@@ -59,4 +59,3 @@ public class PolymorphicResolver extends TypeIdResolverBase {
     return defaultClass;
   }
 }
-

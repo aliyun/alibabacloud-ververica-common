@@ -11,5 +11,4 @@ public class ExecuteSqlScriptResp {
   ExecuteResult result;
   ErrorDetails errorMessage;
   ResultTable resultTable;
-
 }

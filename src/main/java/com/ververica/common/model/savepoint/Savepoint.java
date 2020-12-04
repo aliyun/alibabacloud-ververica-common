@@ -1,10 +1,9 @@
 package com.ververica.common.model.savepoint;
 
 import com.ververica.common.model.Failure;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class Savepoint {

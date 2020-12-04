@@ -9,5 +9,4 @@ public class DdlTemplate {
   String displayName;
   TemplateType type;
   String template;
-
 }

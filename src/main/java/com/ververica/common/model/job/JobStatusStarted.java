@@ -1,8 +1,7 @@
 package com.ververica.common.model.job;
 
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
 
 @Data
 public class JobStatusStarted {

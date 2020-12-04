@@ -5,7 +5,7 @@
 
   <groupId>com.aliyun</groupId>
   <artifactId>ververica-common</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <modelVersion>4.0.0</modelVersion>
 
   <name>ververica-common</name>
@@ -140,6 +140,22 @@
         <version>2.8</version>
         <configuration>
           <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>1.20.0</version>
+        <configuration>
+          <java>
+            <includes>
+              <include>src/**/java/**/*.java</include>
+            </includes>
+            <googleJavaFormat>
+              <version>1.7</version>
+              <style>GOOGLE</style>
+            </googleJavaFormat>
+          </java>
         </configuration>
       </plugin>
       <plugin>

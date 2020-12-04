@@ -37,7 +37,8 @@ public class JsonUtil {
     return MAPPER.writeValueAsString(value);
   }
 
-  public static <T> T toBean(String content, TypeReference<T> valueTypeRef) throws JsonProcessingException {
+  public static <T> T toBean(String content, TypeReference<T> valueTypeRef)
+      throws JsonProcessingException {
     return MAPPER.readValue(content, valueTypeRef);
   }
 

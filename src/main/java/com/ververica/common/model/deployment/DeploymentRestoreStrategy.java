@@ -14,8 +14,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
     String kind = KIND;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -25,8 +24,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
     boolean allowNonRestoredState;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -36,8 +34,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
     boolean allowNonRestoredState;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -45,8 +42,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
     String kind;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   final class TypeResolver extends PolymorphicResolver {

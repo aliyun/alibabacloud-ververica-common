@@ -1,10 +1,9 @@
 package com.ververica.common.model.deploymentdefault;
 
 import com.ververica.common.model.deployment.Deployment;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class DeploymentDefaults {

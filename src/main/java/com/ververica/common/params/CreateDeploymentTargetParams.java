@@ -1,13 +1,10 @@
 package com.ververica.common.params;
 
-import lombok.Data;
-
 import javax.validation.constraints.NotNull;
+import lombok.Data;
 
 @Data
 public class CreateDeploymentTargetParams {
-  @NotNull
-  String name;
-  @NotNull
-  String kubernetesNamespace;
+  @NotNull String name;
+  @NotNull String kubernetesNamespace;
 }

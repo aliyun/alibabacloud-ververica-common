@@ -3,10 +3,9 @@ package com.ververica.common.model.deploymenttarget;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.ververica.common.util.Polymorphic;
 import com.ververica.common.util.PolymorphicResolver;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class DeploymentTarget {
@@ -23,7 +22,6 @@ public class DeploymentTarget {
     Map<String, String> annotations;
     Map<String, String> labels;
     Integer resourceVersion;
-
   }
 
   @JsonTypeIdResolver(DeploymentTargetSpec.Resolver.class)
@@ -37,8 +35,7 @@ public class DeploymentTarget {
       YarnTarget yarn;
 
       @Override
-      public void setKind(String ignored) {
-      }
+      public void setKind(String ignored) {}
     }
 
     @Data
@@ -50,8 +47,7 @@ public class DeploymentTarget {
       KubernetesTarget kubernetes;
 
       @Override
-      public void setKind(String ignored) {
-      }
+      public void setKind(String ignored) {}
     }
 
     class Resolver extends PolymorphicResolver {

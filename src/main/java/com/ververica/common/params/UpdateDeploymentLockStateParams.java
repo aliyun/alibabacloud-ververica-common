@@ -9,8 +9,8 @@ public class UpdateDeploymentLockStateParams {
   String lockState;
 
   public static enum DeploymentLockState {
-    locked,
-    unlocked,
+  locked,
+  unlocked,
 
   }
 }

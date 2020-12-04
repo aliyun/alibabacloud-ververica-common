@@ -9,4 +9,5 @@ public class GetNamespaceResp {
 
   @JsonProperty("namespace")
   Namespace namespace;
+
 }

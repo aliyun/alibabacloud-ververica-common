@@ -1,7 +1,6 @@
 package com.ververica.common.model.AlarmRule;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

@@ -1,10 +1,6 @@
-package com.ververica.common.model.AlarmRule;
+package com.ververica.common.model.alarmrule;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
-import javax.validation.constraints.NotNull;
-import java.util.List;
 
 
 @Data

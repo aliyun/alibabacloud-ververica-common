@@ -1,4 +1,4 @@
-package com.ververica.common.model.AlarmRule;
+package com.ververica.common.model.alarmrule;
 
 import lombok.Data;
 

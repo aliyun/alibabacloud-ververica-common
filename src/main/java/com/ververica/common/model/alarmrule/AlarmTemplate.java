@@ -31,7 +31,7 @@ public class AlarmTemplate {
   @Data
    public static  class NotifyRule{
       String warning;
-      Map<String,Object> critical;
+      Critical critical;
       @JsonProperty("alarm_interval")
       String alarmInterval;
       @JsonProperty("time_range")
@@ -39,10 +39,12 @@ public class AlarmTemplate {
       @JsonProperty("is_schedule")
       String isSchedule;
 
-
-
-
-
    }
+   @Data
+    public static class Critical{
+        boolean dingding;
+        boolean mail;
+        boolean sms;
+    }
 
 }

@@ -1,8 +1,11 @@
 package com.ververica.common.resp;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ververica.common.model.member.Member;
+import lombok.Data;
 
-public class GetMemberResp extends Member {
-
-
+@Data
+public class GetMemberResp {
+      @JsonProperty("member")
+      Member member;
 }

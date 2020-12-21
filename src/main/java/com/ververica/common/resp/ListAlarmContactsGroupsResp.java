@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class ListAlarmContactsGroupsResp {
+public class ListAlarmContactsGroupsResp  extends AlarmContactGroups{
 
-    List<AlarmContactGroups>data;
 }

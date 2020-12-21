@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class ListAlarmTemplatesResp  {
+public class ListAlarmTemplatesResp  extends  AlarmTemplate{
 
-    List<AlarmTemplate>data;
 }

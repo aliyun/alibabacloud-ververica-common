@@ -6,4 +6,6 @@ public enum SessionClusterState {
 
   STOPPED,
 
+  STARTING
+
 }

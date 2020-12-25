@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 import java.util.List;
 
 /*{
@@ -34,10 +35,18 @@ public class AlarmRule {
     @NotNull String name;
     @NotNull String description;
     @NotNull String metric;
+    Integer status;
+    Long id;
     List<String> receivers;
     List<Rule> rule;
     @JsonProperty("notify_rule")
     NotifyRule notifyRule;
+    private Long gmtCreate;
+
+    private Long gmtModified;
+
+    private Date delayEnd;
+    private Long scheduleTemplateId;
     @Data
     public static  class NotifyRule{
         @JsonProperty("alarm_interval")

@@ -6,7 +6,7 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class ParseFormatResp extends Format {
+public class ParseFormatResp {
     @JsonProperty("formats")
     List<Format> formats;
 

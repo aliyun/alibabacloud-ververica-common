@@ -1,7 +1,5 @@
 package com.ververica.common.model.sessioncluster;
 
-import com.ververica.common.model.deployment.DeploymentStatusRunning;
-import com.ververica.common.model.deployment.DeploymentStatusState;
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
 import lombok.Data;
@@ -44,8 +42,7 @@ public class SessionCluster {
     }
     @Data
     public static class SessionClusterStatus{
-        DeploymentStatusState state;
-        DeploymentStatusRunning running;
+        SessionClusterState state;
     }
 
 

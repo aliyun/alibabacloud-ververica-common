@@ -2,8 +2,13 @@ package com.ververica.common.params;
 
 
 import com.ververica.common.model.alarmrule.AlarmContactGroups;
+import lombok.Data;
 
-public class UpdateAlarmContactGroupsParams extends AlarmContactGroups {
+@Data
+public class UpdateAlarmContactGroupsParams  {
+    int contactGroupId;
+    String contactGroupName;
+    String contactIds;
 
 
 }

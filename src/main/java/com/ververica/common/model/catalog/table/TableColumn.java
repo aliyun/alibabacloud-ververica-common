@@ -9,5 +9,5 @@ import lombok.Data;
 public class TableColumn {
   String name;
   String type;
-  String expression;
+  String expr;
 }

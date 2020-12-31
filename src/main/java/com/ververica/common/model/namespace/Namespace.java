@@ -31,5 +31,4 @@ public class Namespace {
   Date createTime;
   List<RoleBinding> roleBindings;
   LifecyclePhase lifecyclePhase;
-  String previewSessionClusterName;
 }

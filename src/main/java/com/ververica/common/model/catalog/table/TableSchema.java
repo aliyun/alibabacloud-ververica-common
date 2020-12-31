@@ -6,7 +6,7 @@ import java.util.List;
 
 @Data
 public class TableSchema {
-  List<TableColumn> column;
-  List<WatermarkSpec> watermarkSpec;
+  List<TableColumn> columns;
+  List<WatermarkSpec> watermarkSpecs;
   UniqueConstraint primaryKey;
 }

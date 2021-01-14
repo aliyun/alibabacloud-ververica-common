@@ -15,7 +15,7 @@ public class AlarmRule {
   @NotNull String description;
   @NotNull String metric;
   Integer status;
-  Long id;
+  Integer id;
   List<String> receivers;
   List<Rule> rule;
   @JsonProperty("notify_rule")
@@ -25,21 +25,5 @@ public class AlarmRule {
   Date delayEnd;
   Long scheduleTemplateId;
 
-  @Data
-  public static class NotifyRule {
-    @JsonProperty("alarm_interval")
-    String alarmInterval;
-    @JsonProperty("time_range")
-    String timeRange;
-    Critical critical;
-  }
-
-  @Data
-  public static class Critical {
-    Boolean dingding;
-    Boolean mail;
-    Boolean sms;
-
-  }
 
 }

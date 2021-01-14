@@ -6,8 +6,5 @@ import lombok.Data;
 
 @Data
 public class CreateFormatResp  {
-
-  @JsonProperty("format")
   Format format;
-
 }

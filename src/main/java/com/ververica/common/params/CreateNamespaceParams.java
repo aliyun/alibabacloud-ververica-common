@@ -12,8 +12,6 @@ public class CreateNamespaceParams {
   String workspace;
   @NotNull
   String name;
-
-  // Ali UID(1709064687573327,211874696439524479) or employee ID(034753)
   @NotEmpty
   List<String> owners;
 }

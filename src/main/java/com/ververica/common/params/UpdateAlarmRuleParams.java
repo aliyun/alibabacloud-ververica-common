@@ -1,7 +1,9 @@
 package com.ververica.common.params;
 
-import com.ververica.common.model.alarmrule.AlarmRule;
+import lombok.Data;
 
-public class UpdateAlarmRuleParams extends AlarmRule {
-
+@Data
+public class UpdateAlarmRuleParams extends CreateAlarmRuleParams {
+  Integer id;
+  Integer status;
 }

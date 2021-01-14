@@ -35,16 +35,12 @@ public interface Artifact extends Polymorphic {
     public static final String KIND = "SQLSCRIPT";
 
     String kind = KIND;
-
     String sqlScript;
-
     String flinkVersion;
-
     String flinkImageRegistry;
-
     String flinkImageRepository;
-
     String flinkImageTag;
+    List<String> additionalDependencies;
 
     @Override
     public void setKind(String ignored) {

@@ -6,8 +6,5 @@ import lombok.Data;
 
 @Data
 public class UpdateConnectorResp {
-
-  @JsonProperty("connector")
   Connector connector;
-
 }

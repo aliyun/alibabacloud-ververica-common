@@ -12,6 +12,6 @@ public class AlarmOptions {
   List<String> notifyWays;
   @JsonProperty("ds-aggregators")
   List<String> dsAggregators;
-  List<String> comparators;
+  List<Comparators> comparators;
 
 }

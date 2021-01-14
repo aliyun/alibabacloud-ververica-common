@@ -29,24 +29,4 @@ public class AlarmTemplate {
   @JsonProperty("notify_rule")
   NotifyRule notifyRule;
 
-  @Data
-  public static class NotifyRule {
-    String warning;
-    Critical critical;
-    @JsonProperty("alarm_interval")
-    String alarmInterval;
-    @JsonProperty("time_range")
-    String timeRange;
-    @JsonProperty("is_schedule")
-    String isSchedule;
-
-  }
-
-  @Data
-  public static class Critical {
-    Boolean dingding;
-    Boolean mail;
-    Boolean sms;
-  }
-
 }

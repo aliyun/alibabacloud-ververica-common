@@ -1,9 +1,13 @@
 package com.ververica.common.params;
 
-import com.ververica.common.model.alarmrule.AlarmContact;
 import lombok.Data;
-
 @Data
-public class UpdateAlarmContactParams extends AlarmContact {
+public class UpdateAlarmContactParams  {
+  Integer contactId;
+  String contactName;
+  String phone;
+  String email;
+  String userId;
+  String dingRobot;
 
 }

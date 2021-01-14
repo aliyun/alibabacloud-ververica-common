@@ -3,13 +3,11 @@ package com.ververica.common.model.alarmrule;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
-import java.util.Map;
-
 @Data
 public class Rule {
 
-  String comparator;
-  Map<String, Object> thresholds;
+  Comparators comparator;
+  Thresholds  thresholds;
   @JsonProperty("check_interval")
   String checkInterval;
   String aggregator;

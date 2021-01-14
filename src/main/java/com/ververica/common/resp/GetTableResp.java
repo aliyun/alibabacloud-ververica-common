@@ -6,8 +6,5 @@ import lombok.Data;
 
 @Data
 public class GetTableResp {
-
-  @JsonProperty("table")
   Table table;
-
 }

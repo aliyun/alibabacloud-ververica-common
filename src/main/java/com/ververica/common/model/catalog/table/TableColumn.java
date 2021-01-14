@@ -10,6 +10,4 @@ public class TableColumn {
   String name;
   String type;
   String expression;
-  @Deprecated
-  String expr;
 }

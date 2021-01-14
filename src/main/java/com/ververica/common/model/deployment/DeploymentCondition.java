@@ -1,8 +1,7 @@
 package com.ververica.common.model.deployment;
 
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
 
 @Data
 public class DeploymentCondition {

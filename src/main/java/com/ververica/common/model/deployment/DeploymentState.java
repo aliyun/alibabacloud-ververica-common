@@ -2,9 +2,7 @@ package com.ververica.common.model.deployment;
 
 public enum DeploymentState {
 
-  /**
-   * The deployment has one running job.
-   */
+  /** The deployment has one running job. */
   RUNNING,
 
   /**
@@ -13,8 +11,6 @@ public enum DeploymentState {
    */
   SUSPENDED,
 
-  /**
-   * The deployment hasn't any running job. No savepoint has been taken.
-   */
+  /** The deployment hasn't any running job. No savepoint has been taken. */
   CANCELLED
 }

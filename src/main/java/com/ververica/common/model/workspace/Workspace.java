@@ -2,7 +2,6 @@ package com.ververica.common.model.workspace;
 
 import lombok.Data;
 
-
 @Data
 public class Workspace {
   String name;

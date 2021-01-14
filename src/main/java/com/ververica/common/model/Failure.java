@@ -1,8 +1,7 @@
 package com.ververica.common.model;
 
-import lombok.Data;
-
 import java.util.Date;
+import lombok.Data;
 
 @Data
 public class Failure {

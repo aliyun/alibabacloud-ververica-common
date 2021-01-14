@@ -6,11 +6,10 @@ import com.ververica.common.model.deployment.KubernetesOptions;
 import com.ververica.common.model.deploymenttarget.DeploymentTarget;
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
-import lombok.Data;
-
 import java.net.URI;
 import java.util.Date;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class Job {

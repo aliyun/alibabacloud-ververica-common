@@ -1,4 +1,3 @@
 package com.ververica.common.resp;
 
-public class CreateNamespaceResp extends GetNamespaceResp {
-}
+public class CreateNamespaceResp extends GetNamespaceResp {}

@@ -10,26 +10,28 @@ import com.aliyuncs.http.HttpResponse;
 import com.aliyuncs.reader.Reader;
 import com.aliyuncs.reader.ReaderFactory;
 import com.aliyuncs.transform.UnmarshallerContext;
-import lombok.extern.slf4j.Slf4j;
-
 import java.lang.reflect.Field;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SdkUtil {
 
   private static final String SIGNATURE_BEGIN = "string to sign is:";
 
-  public static String getHttpContentString(IAcsClient client, AcsRequest request) throws ClientException {
+  public static String getHttpContentString(IAcsClient client, AcsRequest request)
+      throws ClientException {
     HttpResponse baseResponse = client.doAction(request);
     if (baseResponse.isSuccess()) {
       return baseResponse.getHttpContentString();
     } else {
       AcsError error = readError(baseResponse);
       if (500 <= baseResponse.getStatus()) {
-        throw new ServerException(error.getErrorCode(), error.getErrorMessage(), error.getRequestId());
-      } else if (400 == baseResponse.getStatus() && ("IncompleteSignature".equals(error.getErrorCode())
+        throw new ServerException(
+            error.getErrorCode(), error.getErrorMessage(), error.getRequestId());
+      } else if (400 == baseResponse.getStatus()
+          && ("IncompleteSignature".equals(error.getErrorCode())
               || "SignatureDoesNotMatch".equals(error.getErrorCode()))) {
         String errorMessage = error.getErrorMessage();
         Pattern startPattern = Pattern.compile(SIGNATURE_BEGIN);
@@ -39,12 +41,18 @@ public class SdkUtil {
           String errorStrToSign = errorMessage.substring(start);
           String strToSign = getStrToSign(request);
           if (strToSign.equals(errorStrToSign)) {
-            throw new ClientException("SDK.InvalidAccessKeySecret",
-                    "Specified Access Key Secret is not valid.", error.getRequestId());
+            throw new ClientException(
+                "SDK.InvalidAccessKeySecret",
+                "Specified Access Key Secret is not valid.",
+                error.getRequestId());
           }
         }
       }
-      throw new ClientException(error.getErrorCode(), error.getErrorMessage(), error.getRequestId(), error.getErrorDescription());
+      throw new ClientException(
+          error.getErrorCode(),
+          error.getErrorMessage(),
+          error.getRequestId(),
+          error.getErrorDescription());
     }
   }
 

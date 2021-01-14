@@ -11,6 +11,5 @@ public class UpdateDeploymentLockStateParams {
   public static enum DeploymentLockState {
     locked,
     unlocked,
-
   }
 }

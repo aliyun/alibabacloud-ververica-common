@@ -1,8 +1,7 @@
 package com.ververica.common.model.catalog.database;
 
-import lombok.Data;
-
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class Database {

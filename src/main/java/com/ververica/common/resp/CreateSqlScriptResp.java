@@ -1,4 +1,3 @@
 package com.ververica.common.resp;
 
-public class CreateSqlScriptResp extends GetSqlScriptResp {
-}
+public class CreateSqlScriptResp extends GetSqlScriptResp {}

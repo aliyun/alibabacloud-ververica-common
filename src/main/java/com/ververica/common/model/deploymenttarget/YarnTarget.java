@@ -1,9 +1,8 @@
 package com.ververica.common.model.deploymenttarget;
 
+import javax.validation.constraints.Positive;
 import lombok.Data;
 import lombok.NonNull;
-
-import javax.validation.constraints.Positive;
 
 @Data
 public class YarnTarget {

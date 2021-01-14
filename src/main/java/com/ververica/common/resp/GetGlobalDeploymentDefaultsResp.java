@@ -4,5 +4,4 @@ import com.ververica.common.model.deploymentdefault.GlobalDeploymentDefaults;
 import lombok.Data;
 
 @Data
-public class GetGlobalDeploymentDefaultsResp extends GlobalDeploymentDefaults {
-}
+public class GetGlobalDeploymentDefaultsResp extends GlobalDeploymentDefaults {}

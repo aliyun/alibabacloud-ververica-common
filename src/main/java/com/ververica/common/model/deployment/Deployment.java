@@ -1,12 +1,10 @@
 package com.ververica.common.model.deployment;
 
-
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.Map;
+import lombok.Data;
 
 @Data
 public class Deployment {
@@ -44,11 +42,13 @@ public class Deployment {
 
     @Data
     public static class DeploymentTemplate {
+
       DeploymentTemplateMetadata metadata;
       DeploymentTemplateSpec spec;
 
       @Data
       public static class DeploymentTemplateMetadata {
+
         Map<String, String> annotations;
       }
 
@@ -62,15 +62,14 @@ public class Deployment {
         Map<String, String> flinkConfiguration;
         Logging logging;
         KubernetesOptions kubernetes;
-
       }
     }
   }
 
   @Data
   public static class DeploymentStatus {
+
     DeploymentStatusState state;
     DeploymentStatusRunning running;
   }
-
 }

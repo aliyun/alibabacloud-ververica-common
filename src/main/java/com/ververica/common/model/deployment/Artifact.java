@@ -3,10 +3,8 @@ package com.ververica.common.model.deployment;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.ververica.common.util.Polymorphic;
 import com.ververica.common.util.PolymorphicResolver;
-import lombok.Data;
-
 import java.util.List;
-
+import lombok.Data;
 
 @JsonTypeIdResolver(Artifact.Resolver.class)
 public interface Artifact extends Polymorphic {
@@ -26,8 +24,7 @@ public interface Artifact extends Polymorphic {
     List<String> additionalDependencies;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -47,8 +44,7 @@ public interface Artifact extends Polymorphic {
     String flinkImageTag;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   @Data
@@ -56,8 +52,7 @@ public interface Artifact extends Polymorphic {
     String kind;
 
     @Override
-    public void setKind(String ignored) {
-    }
+    public void setKind(String ignored) {}
   }
 
   final class Resolver extends PolymorphicResolver {
@@ -68,4 +63,3 @@ public interface Artifact extends Polymorphic {
     }
   }
 }
-

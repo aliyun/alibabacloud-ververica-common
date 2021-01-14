@@ -1,21 +1,13 @@
 package com.ververica.common.model.savepoint;
 
-/**
- * Different Savepoint states.
- */
+/** Different Savepoint states. */
 public enum SavepointState {
-  /**
-   * Savepoint in progress.
-   */
+  /** Savepoint in progress. */
   STARTED,
 
-  /**
-   * Savepoint finished.
-   */
+  /** Savepoint finished. */
   COMPLETED,
 
-  /**
-   * Savepoint couldn't be created.
-   */
+  /** Savepoint couldn't be created. */
   FAILED
 }

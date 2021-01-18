@@ -42,11 +42,13 @@ public class Deployment {
 
     @Data
     public static class DeploymentTemplate {
+
       DeploymentTemplateMetadata metadata;
       DeploymentTemplateSpec spec;
 
       @Data
       public static class DeploymentTemplateMetadata {
+
         Map<String, String> annotations;
       }
 
@@ -66,6 +68,7 @@ public class Deployment {
 
   @Data
   public static class DeploymentStatus {
+
     DeploymentStatusState state;
     DeploymentStatusRunning running;
   }

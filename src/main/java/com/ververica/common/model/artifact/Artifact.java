@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class Artifact {
+
   String filename;
   String content;
   Date createTime;

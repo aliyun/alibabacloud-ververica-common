@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class UpdateDeploymentLockStateParams {
-
   // locked or unlocked
   String lockState;
 

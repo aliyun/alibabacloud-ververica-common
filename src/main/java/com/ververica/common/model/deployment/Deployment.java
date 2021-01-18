@@ -29,7 +29,7 @@ public class Deployment {
 
   @Data
   public static class DeploymentSpec {
-
+    String sessionClusterName;
     DeploymentState state;
     DeploymentUpgradeStrategy upgradeStrategy;
     DeploymentRestoreStrategy restoreStrategy;

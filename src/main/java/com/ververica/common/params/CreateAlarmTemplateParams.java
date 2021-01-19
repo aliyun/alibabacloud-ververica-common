@@ -5,11 +5,14 @@ import com.ververica.common.model.alarmrule.Comparators;
 import com.ververica.common.model.alarmrule.NotifyRule;
 import com.ververica.common.model.alarmrule.Thresholds;
 import java.util.List;
+import javax.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 public class CreateAlarmTemplateParams {
+  @NotBlank(message = "name not set")
   String name;
+
   String description;
   String metric;
   /** This is the ID of the contact group */

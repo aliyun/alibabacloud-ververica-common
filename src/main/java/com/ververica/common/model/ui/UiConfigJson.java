@@ -1,14 +1,15 @@
 package com.ververica.common.model.ui;
 
-import com.ververica.common.model.license.LicenseInformation;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import lombok.Data;
+import lombok.NonNull;
 
+@Data
 public class UiConfigJson {
   String version;
-  /** TODO: move server.endpoint to components.appmanager.endpoint */
   Map<String, String> server = new HashMap();
 
   String platformKubernetesNamespace;
@@ -27,7 +28,8 @@ public class UiConfigJson {
 
   Map<String, Object> extraConfig;
 
-  private static class UiComponentConfigs {
+  @Data
+  public static class UiComponentConfigs {
     ArtifactsComponentConfig artifacts;
     BlobStorageComponentConfig blobStorage;
     LoggingComponentConfig logging;
@@ -38,30 +40,36 @@ public class UiConfigJson {
     AlinkComponentConfig alink;
   }
 
-  private static class ArtifactsComponentConfig {
+  @Data
+  public static class ArtifactsComponentConfig {
     Boolean enabled;
   }
 
-  private static class BlobStorageComponentConfig {
+  @Data
+  public static class BlobStorageComponentConfig {
     URI baseUri;
   }
 
-  private static class LoggingComponentConfig {
+  @Data
+  public static class LoggingComponentConfig {
     Boolean enabled;
   }
 
-  private static class MetricsComponentConfig {
+  @Data
+  public static class MetricsComponentConfig {
     Boolean enabled;
   }
 
-  private static class SqlComponentConfig {
+  @Data
+  public static class SqlComponentConfig {
     Boolean enabled;
     CatalogConfigProperties catalogConfig;
     String requiredFlinkImageVersion;
     String requiredFlinkImageTag;
   }
 
-  private static class CatalogConfigProperties {
+  @Data
+  public static class CatalogConfigProperties {
     private String defaultCatalogName;
     private String defaultDatabaseName;
     private Long catalogCacheMaxSize;
@@ -70,18 +78,31 @@ public class UiConfigJson {
     private String confLocalDir;
   }
 
-  private static class AutopilotComponentConfig {
+  @Data
+  public static class AutopilotComponentConfig {
     Boolean enabled;
     AgentFactory agentFactory;
   }
 
-  private static class AlinkComponentConfig {
+  @Data
+  public static class AlinkComponentConfig {
     Boolean enabled;
   }
 
-  private static enum AgentFactory {
+  public static enum AgentFactory {
     VVP,
     RTC,
     UNSUPPORTED
+  }
+
+  @Data
+  public class LicenseInformation {
+    String licensedTo;
+    @NonNull Boolean isCommunityEdition;
+    String expiresOn;
+    @NonNull String cpuQuotaType;
+    String cpuQuota;
+    Boolean isTrial;
+    Boolean isNotForResale;
   }
 }

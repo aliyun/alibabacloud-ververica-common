@@ -22,8 +22,7 @@ public class CreateAlarmRuleParams {
   /** This is the ID of the contact group */
   List<String> receivers;
 
-  @NotEmpty
-  List<Rule> rule;
+  @NotEmpty List<Rule> rule;
 
   @JsonProperty("notify_rule")
   NotifyRule notifyRule;

@@ -7,4 +7,7 @@ import lombok.Data;
 public class CreateDeploymentTargetParams {
   @NotNull String name;
   @NotNull String kubernetesNamespace;
+  String storageUri;
+  String zookeeperEndpoint;
+  String clusterName;
 }

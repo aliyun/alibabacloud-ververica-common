@@ -1,5 +1,5 @@
 package com.ververica.common.params;
 
-import com.ververica.common.model.sessioncluster.SessionCluster;
+import com.ververica.common.model.sessioncluster.SessionClusterBase;
 
-public class CreateSessionClusterParams extends SessionCluster {}
+public class CreateSessionClusterParams extends SessionClusterBase {}

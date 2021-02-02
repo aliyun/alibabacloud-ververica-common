@@ -1,13 +1,18 @@
 package com.ververica.common.model.alarmrule;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Map;
 import lombok.Data;
 
 @Data
 public class Rule {
 
   Comparators comparator;
-  Thresholds thresholds;
+  /**
+   * There are two kinds of threshold keys, respectively: 'CRITICAL' and 'WARNING',Value is Doble
+   * type
+   */
+  Map<ThresholdType, Double> thresholds;
 
   @JsonProperty("check_interval")
   String checkInterval;

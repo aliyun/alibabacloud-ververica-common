@@ -1,10 +1,9 @@
-package com.ververica.common.model.workspace;
+package com.ververica.common.params;
 
 import lombok.Data;
 
 @Data
-public class Workspace {
-  String name;
+public class UpdateWorkspaceParams {
   String endpoint;
   String owner;
   String blobProperties;

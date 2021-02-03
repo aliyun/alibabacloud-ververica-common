@@ -43,8 +43,9 @@ public class DeploymentTarget {
       public static final String KIND = "kubernetes";
 
       String kind = KIND;
-
       KubernetesTarget kubernetes;
+      String storageUri;
+      String zookeeperEndpoint;
 
       @Override
       public void setKind(String ignored) {}

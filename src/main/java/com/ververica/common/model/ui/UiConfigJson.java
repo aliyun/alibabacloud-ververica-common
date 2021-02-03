@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import lombok.Data;
-import lombok.NonNull;
 
 @Data
 public class UiConfigJson {
@@ -70,12 +69,12 @@ public class UiConfigJson {
 
   @Data
   public static class CatalogConfigProperties {
-    private String defaultCatalogName;
-    private String defaultDatabaseName;
-    private Long catalogCacheMaxSize;
-    private Long catalogCacheEvictionIntervalInMins;
-    private Long externalCatalogTimeoutInSecs;
-    private String confLocalDir;
+    String defaultCatalogName;
+    String defaultDatabaseName;
+    Long catalogCacheMaxSize;
+    Long catalogCacheEvictionIntervalInMins;
+    Long externalCatalogTimeoutInSecs;
+    String confLocalDir;
   }
 
   @Data
@@ -96,11 +95,11 @@ public class UiConfigJson {
   }
 
   @Data
-  public class LicenseInformation {
+  public static class LicenseInformation {
     String licensedTo;
-    @NonNull Boolean isCommunityEdition;
+    Boolean isCommunityEdition;
     String expiresOn;
-    @NonNull String cpuQuotaType;
+    String cpuQuotaType;
     String cpuQuota;
     Boolean isTrial;
     Boolean isNotForResale;

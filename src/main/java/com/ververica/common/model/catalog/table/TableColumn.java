@@ -8,4 +8,5 @@ public class TableColumn {
   String name;
   String type;
   String expression;
+  MetadataColumnInformation meta;
 }

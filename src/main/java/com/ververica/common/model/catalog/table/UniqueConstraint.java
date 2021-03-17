@@ -9,4 +9,5 @@ public class UniqueConstraint {
   String name;
   List<String> columns;
   String type;
+  Boolean enforced;
 }

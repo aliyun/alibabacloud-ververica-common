@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class DatabaseExistsResp {
-  boolean exists;
+  Boolean exists;
 }

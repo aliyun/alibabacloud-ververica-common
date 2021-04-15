@@ -10,7 +10,10 @@ import com.aliyuncs.http.HttpResponse;
 import com.aliyuncs.reader.Reader;
 import com.aliyuncs.reader.ReaderFactory;
 import com.aliyuncs.transform.UnmarshallerContext;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import java.lang.reflect.Field;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +24,9 @@ public class SdkUtil {
   private static final String SIGNATURE_BEGIN = "string to sign is:";
 
   public static String getHttpContentString(IAcsClient client, AcsRequest request)
-      throws ClientException {
+      throws ClientException, JsonProcessingException {
     HttpResponse baseResponse = client.doAction(request);
-    if (baseResponse.isSuccess()) {
+    if (isSuccess(baseResponse)) {
       return baseResponse.getHttpContentString();
     } else {
       AcsError error = readError(baseResponse);
@@ -54,6 +57,17 @@ public class SdkUtil {
           error.getRequestId(),
           error.getErrorDescription());
     }
+  }
+
+  private static boolean isSuccess(HttpResponse response)
+      throws ClientException, JsonProcessingException {
+    if (response.isSuccess()) {
+      Map<String, Object> result =
+          JsonUtil.toBean(
+              response.getHttpContentString(), new TypeReference<Map<String, Object>>() {});
+      return !result.containsKey("Message");
+    }
+    return false;
   }
 
   private static String getStrToSign(AcsRequest request) {

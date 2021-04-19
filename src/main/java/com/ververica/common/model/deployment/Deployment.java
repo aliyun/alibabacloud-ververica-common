@@ -61,6 +61,7 @@ public class Deployment {
         Map<String, ResourceSpec> resources;
         Map<String, String> flinkConfiguration;
         Logging logging;
+        Boolean batchMode;
         KubernetesOptions kubernetes;
       }
     }

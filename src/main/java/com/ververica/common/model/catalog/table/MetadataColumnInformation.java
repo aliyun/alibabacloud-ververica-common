@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class MetadataColumnInformation {
-    String name;
-    Boolean virtual;
+  String name;
+  Boolean virtual;
 }

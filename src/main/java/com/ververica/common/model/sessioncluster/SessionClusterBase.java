@@ -53,5 +53,7 @@ public class SessionClusterBase {
 
     @NotNull(message = "logging not set")
     Logging logging;
+
+    Kubernetes kubernetes;
   }
 }

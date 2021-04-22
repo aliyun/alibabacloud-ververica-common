@@ -1,15 +1,5 @@
 package com.ververica.common.params;
 
-import lombok.Data;
+import com.ververica.common.model.folder.Folder;
 
-@Data
-public class CreateFolderParams {
-  FolderMetadata metadata;
-
-  @Data
-  public static class FolderMetadata {
-    String parentId;
-    String namespace;
-    String name;
-  }
-}
+public class CreateFolderParams extends Folder {}

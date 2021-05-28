@@ -4,6 +4,6 @@ import com.ververica.common.model.ubsInfo.UbsInfo;
 import lombok.Data;
 
 @Data
-public class CreateApiTokenResp {
+public class CreateUbsInfoResp {
   UbsInfo ubsInfo;
 }

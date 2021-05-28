@@ -44,6 +44,25 @@ public interface Artifact extends Polymorphic {
   }
 
   @Data
+  class PythonArtifact implements Artifact {
+    public static final String KIND = "PYTHON";
+    String mainArgs;
+    String kind = KIND;
+    String entryModule;
+    String flinkVersion;
+    String flinkImageRegistry;
+    String flinkImageRepository;
+    String flinkImageTag;
+    List<String> additionalDependencies;
+    List<String> additionalPythonArchives;
+    List<String> additionalPythonLibraries;
+    String pythonArtifactUri;
+
+    @Override
+    public void setKind(String ignored) {}
+  }
+
+  @Data
   class UnknownArtifact implements Artifact {
     String kind;
 
@@ -55,6 +74,7 @@ public interface Artifact extends Polymorphic {
     public Resolver() {
       bind(JarArtifact.KIND, JarArtifact.class);
       bind(SqlScriptArtifact.KIND, SqlScriptArtifact.class);
+      bind(PythonArtifact.KIND, PythonArtifact.class);
       bindDefault(UnknownArtifact.class);
     }
   }

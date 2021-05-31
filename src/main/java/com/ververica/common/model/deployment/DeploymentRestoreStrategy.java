@@ -1,5 +1,6 @@
 package com.ververica.common.model.deployment;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.ververica.common.util.Polymorphic;
 import com.ververica.common.util.PolymorphicResolver;
@@ -12,6 +13,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
   class None implements DeploymentRestoreStrategy {
     public static final String KIND = "NONE";
     String kind = KIND;
+    @JsonInclude Boolean allowNonRestoredState;
 
     @Override
     public void setKind(String ignored) {}
@@ -21,7 +23,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
   class LatestSavepoint implements DeploymentRestoreStrategy {
     public static final String KIND = "LATEST_SAVEPOINT";
     String kind = KIND;
-    boolean allowNonRestoredState;
+    Boolean allowNonRestoredState;
 
     @Override
     public void setKind(String ignored) {}
@@ -31,7 +33,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
   class LatestState implements DeploymentRestoreStrategy {
     public static final String KIND = "LATEST_STATE";
     String kind = KIND;
-    boolean allowNonRestoredState;
+    Boolean allowNonRestoredState;
 
     @Override
     public void setKind(String ignored) {}

@@ -1,9 +1,9 @@
 package com.ververica.common.model.deployment;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import lombok.Data;
 

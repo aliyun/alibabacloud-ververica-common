@@ -5,5 +5,5 @@ import lombok.Data;
 
 @Data
 public class ValidationResult {
-  private final Set<ValidationError> errors;
+  Set<ValidationError> errors;
 }

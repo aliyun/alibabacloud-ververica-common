@@ -14,6 +14,8 @@ public interface Artifact extends Polymorphic {
     public static final String KIND = "JAR";
 
     String kind = KIND;
+    Boolean imageUserDefined;
+    String versionName;
     String jarUri;
     String mainArgs;
     String entryClass;
@@ -32,6 +34,8 @@ public interface Artifact extends Polymorphic {
     public static final String KIND = "SQLSCRIPT";
 
     String kind = KIND;
+    Boolean imageUserDefined;
+    String versionName;
     String sqlScript;
     String flinkVersion;
     String flinkImageRegistry;
@@ -46,6 +50,8 @@ public interface Artifact extends Polymorphic {
   @Data
   class PythonArtifact implements Artifact {
     public static final String KIND = "PYTHON";
+    Boolean imageUserDefined;
+    String versionName;
     String mainArgs;
     String kind = KIND;
     String entryModule;

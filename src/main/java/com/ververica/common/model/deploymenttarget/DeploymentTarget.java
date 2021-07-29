@@ -33,6 +33,7 @@ public class DeploymentTarget {
 
       String kind = KIND;
       YarnTarget yarn;
+      DeploymentTargetState state = DeploymentTargetState.ONLINE;
 
       @Override
       public void setKind(String ignored) {}
@@ -46,6 +47,7 @@ public class DeploymentTarget {
       KubernetesTarget kubernetes;
       String storageUri;
       String zookeeperEndpoint;
+      DeploymentTargetState state = DeploymentTargetState.ONLINE;
 
       @Override
       public void setKind(String ignored) {}

@@ -1,5 +1,6 @@
 package com.ververica.common.model.deployment;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
 import java.util.Date;
@@ -59,6 +60,7 @@ public class Deployment {
         Integer parallelism;
         Integer numberOfTaskManagers;
         Map<String, ResourceSpec> resources;
+        @JsonInclude
         Map<String, String> flinkConfiguration;
         Logging logging;
         Boolean batchMode;

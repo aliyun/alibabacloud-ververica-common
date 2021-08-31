@@ -60,8 +60,7 @@ public class Deployment {
         Integer parallelism;
         Integer numberOfTaskManagers;
         Map<String, ResourceSpec> resources;
-        @JsonInclude
-        Map<String, String> flinkConfiguration;
+        @JsonInclude Map<String, String> flinkConfiguration;
         Logging logging;
         Boolean batchMode;
         KubernetesOptions kubernetes;

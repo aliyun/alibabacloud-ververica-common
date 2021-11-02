@@ -13,7 +13,6 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
   class None implements DeploymentRestoreStrategy {
     public static final String KIND = "NONE";
     String kind = KIND;
-    @JsonInclude Boolean allowNonRestoredState;
 
     @Override
     public void setKind(String ignored) {}

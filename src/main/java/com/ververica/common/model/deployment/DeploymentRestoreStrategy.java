@@ -1,6 +1,5 @@
 package com.ververica.common.model.deployment;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import com.ververica.common.util.Polymorphic;
 import com.ververica.common.util.PolymorphicResolver;
@@ -38,20 +37,11 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
     public void setKind(String ignored) {}
   }
 
-  @Data
-  class Unspecified implements DeploymentRestoreStrategy {
-    String kind;
-
-    @Override
-    public void setKind(String ignored) {}
-  }
-
   final class TypeResolver extends PolymorphicResolver {
     public TypeResolver() {
       bind(None.KIND, None.class);
       bind(LatestSavepoint.KIND, LatestSavepoint.class);
       bind(LatestState.KIND, LatestState.class);
-      bindDefault(Unspecified.class);
     }
   }
 }

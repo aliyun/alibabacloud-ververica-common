@@ -40,20 +40,11 @@ public interface DeploymentUpgradeStrategy extends Polymorphic {
     public void setKind(String ignored) {}
   }
 
-  @Data
-  class UnspecifiedDeploymentUpgrade implements DeploymentUpgradeStrategy {
-    String kind;
-
-    @Override
-    public void setKind(String ignored) {}
-  }
-
   final class TypeResolver extends PolymorphicResolver {
     public TypeResolver() {
       bind(StatefulDeploymentUpgrade.KIND, StatefulDeploymentUpgrade.class);
       bind(StatelessDeploymentUpgrade.KIND, StatelessDeploymentUpgrade.class);
       bind(NoDeploymentUpgrade.KIND, NoDeploymentUpgrade.class);
-      bindDefault(UnspecifiedDeploymentUpgrade.class);
     }
   }
 }

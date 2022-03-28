@@ -8,4 +8,5 @@ import lombok.Data;
 public class UpdateSessionClusterDesiredStateParams {
 
   @NotNull SessionClusterState state;
+  Boolean isForceStopState;
 }

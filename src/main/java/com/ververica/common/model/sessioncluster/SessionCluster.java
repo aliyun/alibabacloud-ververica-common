@@ -8,6 +8,6 @@ public class SessionCluster extends SessionClusterBase {
 
   @Data
   public static class SessionClusterStatus {
-    SessionClusterState state;
+    SessionClusterStatusState state;
   }
 }

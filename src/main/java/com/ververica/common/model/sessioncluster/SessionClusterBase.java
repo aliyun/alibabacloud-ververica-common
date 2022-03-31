@@ -27,7 +27,6 @@ public class SessionClusterBase {
     Date createdAt;
     Date modifiedAt;
     Map<String, String> labels;
-    Map<String, String> annotations;
   }
 
   @Data

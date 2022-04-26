@@ -3,8 +3,6 @@ package com.ververica.common.resp;
 import lombok.Data;
 
 @Data
-public class GetSaveResourcePlanResultResp {
-  String message;
-  Boolean success;
+public class GetAsyncDeployResultResp extends DeployDeploymentDraftResp {
   String ticketStatus;
 }

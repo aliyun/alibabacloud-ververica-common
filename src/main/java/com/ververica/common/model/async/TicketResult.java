@@ -1,4 +1,4 @@
-package com.ververica.common.resp;
+package com.ververica.common.model.async;
 
 import lombok.Data;
 

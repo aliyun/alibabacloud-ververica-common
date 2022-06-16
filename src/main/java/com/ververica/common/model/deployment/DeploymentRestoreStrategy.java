@@ -28,6 +28,17 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
   }
 
   @Data
+  class FromSavepoint implements DeploymentRestoreStrategy {
+    public static final String KIND = "FROM_SAVEPOINT";
+    String kind = KIND;
+    Boolean allowNonRestoredState;
+    String savepointId;
+
+    @Override
+    public void setKind(String ignored) {}
+  }
+
+  @Data
   class LatestState implements DeploymentRestoreStrategy {
     public static final String KIND = "LATEST_STATE";
     String kind = KIND;
@@ -42,6 +53,7 @@ public interface DeploymentRestoreStrategy extends Polymorphic {
       bind(None.KIND, None.class);
       bind(LatestSavepoint.KIND, LatestSavepoint.class);
       bind(LatestState.KIND, LatestState.class);
+      bind(FromSavepoint.KIND, FromSavepoint.class);
     }
   }
 }

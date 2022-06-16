@@ -5,7 +5,7 @@
 
   <groupId>com.aliyun</groupId>
   <artifactId>ververica-common</artifactId>
-  <version>1.0.24</version>
+  <version>1.0.25</version>
   <modelVersion>4.0.0</modelVersion>
 
   <name>ververica-common</name>
@@ -21,6 +21,7 @@
     <guava.version>18.0</guava.version>
     <lombok.version>1.18.12</lombok.version>
   </properties>
+
 
   <distributionManagement>
     <snapshotRepository>

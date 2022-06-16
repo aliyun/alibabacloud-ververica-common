@@ -3,7 +3,6 @@ package com.ververica.common.model.job;
 import com.ververica.common.model.Failure;
 import com.ververica.common.model.deployment.Artifact;
 import com.ververica.common.model.deployment.KubernetesOptions;
-import com.ververica.common.model.deploymenttarget.DeploymentTarget;
 import com.ververica.common.model.logging.Logging;
 import com.ververica.common.model.resource.ResourceSpec;
 import java.net.URI;
@@ -42,7 +41,7 @@ public class Job {
     Map<String, ResourceSpec> resources;
     KubernetesOptions kubernetes;
 
-    DeploymentTarget.DeploymentTargetSpec deploymentTarget;
+    JobDeploymentTarget deploymentTarget;
 
     Map<String, String> secretValues;
   }

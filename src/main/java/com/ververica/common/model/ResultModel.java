@@ -10,6 +10,7 @@ public class ResultModel<T> {
   Integer httpCode;
   String message;
   String reason;
+  String status;
   T data;
 
   public void setData(String requestId, T data) {

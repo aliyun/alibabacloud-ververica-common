@@ -10,4 +10,5 @@ public class CreateDeploymentTargetParams {
   String storageUri;
   String zookeeperEndpoint;
   String clusterName;
+  String engineCompatibility;
 }

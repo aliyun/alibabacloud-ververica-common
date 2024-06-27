@@ -47,6 +47,7 @@ public class DeploymentTarget {
       KubernetesTarget kubernetes;
       String storageUri;
       String zookeeperEndpoint;
+      String engineCompatibility;
       DeploymentTargetState state = DeploymentTargetState.ONLINE;
 
       @Override
